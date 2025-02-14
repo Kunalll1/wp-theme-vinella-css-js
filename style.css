@@ -5,11 +5,17 @@ Author URI: kunalkr.in
 Version: 1.0
 */
 
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap");
+
 /* CSS reset Start */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  font-family: "Figtree", sans-serif !important;
 }
 
 * {
@@ -59,20 +65,258 @@ h5,
 h6 {
   text-wrap: balance;
 }
+
+.container {
+  max-width: 141.8rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 0 3rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding: 0 4rem;
+  }
+}
+
 /* End */
+
+:root {
+  --primery-button-color: linear-gradient(
+    0deg,
+    rgba(255, 25, 25, 1) 0%,
+    rgba(227, 11, 11, 1) 100%
+  );
+  --sec-button-color: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(250, 250, 250, 1) 100%
+  );
+  --button-border-color: rgba(0, 0, 0, 0.2);
+  --font-color-1: #ffffff;
+  --font-color-2: #0c0e17;
+}
 
 /* Coustome sytles Start */
 
+header {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  z-index: 100;
+  padding-top: 3rem !important;
+}
+
+/* Menu Styling  */
+ul#menu-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style-type: none;
+  gap: 4rem;
+}
+
+ul#menu-main li a {
+  text-decoration: none;
+  color: var(--font-color-1);
+  font-size: 1.6rem;
+}
+
+ul.sub-menu {
+  display: none;
+}
+
+.button-menu {
+  margin-left: 4rem;
+  background: var(--sec-button-color);
+  border: 1px solid var(--button-border-color);
+  font-size: 1.6rem;
+  padding: 1.4rem 1.8rem;
+  border-radius: 1.2rem;
+}
+
+.button-menu a {
+  color: var(--font-color-2) !important;
+}
+
+/* Hero Section */
+.main-section {
+  position: relative;
+  color: var(--font-color-1) !important;
+  z-index: 1;
+  margin-top: -10rem;
+  padding-bottom: 7rem;
+}
+
+.hero-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.left-hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1.6rem;
+  width: 60%;
+}
+
+.left-hero h1 {
+  font-size: 12rem;
+  font-weight: 500;
+  line-height: 100%;
+  letter-spacing: 0.01em;
+}
+
+.left-hero p {
+  font-size: 2.4rem;
+  font-weight: 500;
+  line-height: 170%;
+  letter-spacing: 0.02em;
+}
+
 .primary-button {
-  background-color: red;
-  color: #fff;
-  border: 1px solid #000;
+  background: var(--primery-button-color);
+  color: var(--font-color-1);
+  border: 1px solid var(--button-border-color);
+  font-size: 1.6rem;
+  padding: 1.4rem 1.8rem;
+  border-radius: 1.2rem;
 }
 
 .sec-button {
-  background-color: #fff;
-  color: #000;
-  border: 1px solid #000;
+  background: var(--sec-button-color);
+  color: var(--font-color-2);
+  border: 1px solid var(--button-border-color);
+  font-size: 1.6rem;
+  padding: 1.4rem 1.8rem;
+  border-radius: 1.2rem;
+}
+
+.button-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.button-wrapper a {
+  text-decoration: none;
+}
+
+.right-hero {
+  margin-top: 15rem;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.6rem;
+  padding-top: 3.1rem;
+  padding-bottom: 4.7rem;
+  padding-right: 4.2rem;
+  padding-left: 4.2rem;
+}
+
+.right-hero h4 {
+  font-size: 3.6rem;
+  font-weight: 600;
+  line-height: 140%;
+  letter-spacing: 0.01em;
+  text-align: center;
+}
+
+.form-bg {
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 84px 0 rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(32px);
+  -webkit-backdrop-filter: blur(32px);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+#acf-form
+  > div.acf-fields.acf-form-fields.-top
+  > div.acf-field.acf-field-text.acf-field--post-title.is-required
+  > div.acf-label
+  > label {
+  display: none;
+}
+
+.acf-fields > .acf-field {
+  border: none !important;
+}
+
+.acf-field .acf-label label {
+  display: none !important;
+}
+
+.acf-form-submit input[type="submit"] {
+  background: var(--primery-button-color);
+  color: var(--font-color-1);
+  border: 1px solid var(--button-border-color);
+  font-size: 1.6rem;
+  padding: 1.4rem 1.8rem;
+  border-radius: 1.2rem;
+}
+.acf-fields.acf-form-fields.-top {
+  width: 100%;
+}
+form#acf-form {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.acf-fields > .acf-field {
+  border-top: 1px solid #eaecf0;
+  padding: 0 !important;
+  position: relative;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+div#message {
+  display: none;
+}
+
+.acf-field input[type="date"],
+.acf-field input[type="datetime-local"],
+.acf-field input[type="datetime"],
+.acf-field input[type="email"],
+.acf-field input[type="month"],
+.acf-field input[type="number"],
+.acf-field input[type="password"],
+.acf-field input[type="search"],
+.acf-field input[type="tel"],
+.acf-field input[type="text"],
+.acf-field input[type="time"],
+.acf-field input[type="url"],
+.acf-field input[type="week"],
+.acf-field select,
+.acf-field textarea {
+  font-size: 1.6rem !important;
+  padding: 1.1rem 1.8rem !important;
+  border-radius: 0.8rem;
 }
 
 /* Coustome sytles End */

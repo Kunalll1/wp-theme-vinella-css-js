@@ -23,6 +23,8 @@ style="
     background-position: center;
     background-attachment: fixed;
 ">
+<section class="container hero-section">
+
     <div class="left-hero">
         <h1><?php echo esc_html(get_field('title_hero'));?></h1>
         <?php
@@ -38,10 +40,12 @@ style="
         <?php get_template_part('components/button-group-comp'); ?>
 
     </div>
-    <div class="right-hero">
+    <div class="right-hero form-bg">
+        <h4>Schedule a Free Consultation</h4>
         <!-- Form -->
         <?php get_template_part('components/acf-form-comp'); ?>
     </div>
+</section>
 
 <!-- testing components -->
 <!-- <?php //get_template_part('components/slider-comp'); ?> -->

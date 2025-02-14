@@ -13,7 +13,7 @@
             'post_status' => 'draft',
         ],
         'field_groups' => array(41), // Replace with your actual ACF Field Group ID
-        'submit_value' => 'Submit',
+        'submit_value' => 'Book A Free Consultation',
         // 'return'       => add_query_arg('form_submitted', 'true', get_permalink()), // Stay on the same page & show message
     ]);
 
@@ -24,6 +24,6 @@
 ?>
 
 <script>
-    const title = document.querySelector("#acf-form > div.acf-fields.acf-form-fields.-top > div.acf-field.acf-field-text.acf-field--post-title.is-required > div.acf-label > label");
-    title.textContent = "Full Name";
+    const title = document.querySelector("input#acf-_post_title");
+    title.setAttribute("placeholder", "Full Name"); 
 </script>
