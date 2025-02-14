@@ -319,4 +319,122 @@ div#message {
   border-radius: 0.8rem;
 }
 
+@media screen and (max-width: 1024px) {
+  .menu-main-container {
+    display: none;
+  }
+
+  html {
+    font-size: 40%;
+  }
+
+  .hero-section {
+    flex-direction: column;
+    padding-top: 22rem;
+    gap: 8rem;
+  }
+
+  .left-hero {
+    width: 90%;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .left-hero h1 {
+    text-align: center;
+  }
+
+  .left-hero p {
+    text-align: center;
+    width: 60%;
+  }
+
+  .right-hero {
+    width: 50%;
+    align-items: center;
+    margin-top: 0 !important;
+  }
+
+  .primary-button,
+  .sec-button,
+  .acf-form-submit input[type="submit"] {
+    font-size: 2.6rem;
+    padding: 1.8rem 2.2rem;
+  }
+
+  .acf-field input[type="date"],
+  .acf-field input[type="datetime-local"],
+  .acf-field input[type="datetime"],
+  .acf-field input[type="email"],
+  .acf-field input[type="month"],
+  .acf-field input[type="number"],
+  .acf-field input[type="password"],
+  .acf-field input[type="search"],
+  .acf-field input[type="tel"],
+  .acf-field input[type="text"],
+  .acf-field input[type="time"],
+  .acf-field input[type="url"],
+  .acf-field input[type="week"],
+  .acf-field select,
+  .acf-field textarea {
+    font-size: 2.6rem !important;
+  }
+}
+
+@media screen and (max-width: 558px) {
+  html {
+    font-size: 35%;
+  }
+  .hero-section {
+    gap: 14rem;
+  }
+  .left-hero,
+  .left-hero p,
+  .left-hero h1 {
+    width: 100%;
+  }
+
+  .left-hero h1 {
+    font-size: 10rem;
+  }
+
+  .right-hero {
+    width: 90%;
+  }
+}
+
+.side-logo {
+  width: 38%;
+}
+
+@media screen and (max-width: 400px) {
+  .primary-button,
+  .sec-button,
+  .acf-form-submit input[type="submit"] {
+    font-size: 2rem;
+    padding: 1.6rem 2rem;
+  }
+
+  .acf-field input[type="date"],
+  .acf-field input[type="datetime-local"],
+  .acf-field input[type="datetime"],
+  .acf-field input[type="email"],
+  .acf-field input[type="month"],
+  .acf-field input[type="number"],
+  .acf-field input[type="password"],
+  .acf-field input[type="search"],
+  .acf-field input[type="tel"],
+  .acf-field input[type="text"],
+  .acf-field input[type="time"],
+  .acf-field input[type="url"],
+  .acf-field input[type="week"],
+  .acf-field select,
+  .acf-field textarea {
+    font-size: 2rem !important;
+  }
+
+  .left-hero h1 {
+    font-size: 8rem;
+  }
+}
 /* Coustome sytles End */
