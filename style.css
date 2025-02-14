@@ -60,3 +60,19 @@ h6 {
   text-wrap: balance;
 }
 /* End */
+
+/* Coustome sytles Start */
+
+.primary-button {
+  background-color: red;
+  color: #fff;
+  border: 1px solid #000;
+}
+
+.sec-button {
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #000;
+}
+
+/* Coustome sytles End */

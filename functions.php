@@ -113,3 +113,6 @@ function theme_customize_register($wp_customize) {
     ]));
 }
 add_action('customize_register', 'theme_customize_register');
+
+
+
