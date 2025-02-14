@@ -317,6 +317,7 @@ div#message {
   font-size: 1.6rem !important;
   padding: 1.1rem 1.8rem !important;
   border-radius: 0.8rem;
+  width: 100%;
 }
 
 @media screen and (max-width: 1024px) {

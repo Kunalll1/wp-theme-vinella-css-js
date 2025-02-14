@@ -114,5 +114,56 @@ function theme_customize_register($wp_customize) {
 }
 add_action('customize_register', 'theme_customize_register');
 
+// ================ Optmization for Code  ===============
 
+function custom_dequeue_unnecessary_assets() {
+    if ( is_admin() || current_user_can( 'manage_options' ) ) {
+        return;
+    }
+
+    $scripts_to_remove = [
+        'jquery-migrate',
+        'jquery-ui-core',
+        'jquery-ui-mouse',
+        'jquery-ui-sortable',
+        'jquery-ui-resizable',
+        'wp-dom-ready',
+        'wp-i18n',
+        'wp-a11y',
+        'acf-input',
+        'acf-pro-ui-options-page',
+        'select2',
+        'jquery-ui-datepicker',
+        'acf-timepicker',
+        'jquery-ui-draggable',
+        'jquery-ui-slider',
+        'jquery-touch-punch',
+        'iris',
+        'wp-color-picker',
+        'acf-color-picker-alpha',
+    ];
+
+    $styles_to_remove = [
+        'dashicons',
+        'wp-emoji-styles',
+        'acf-global',
+        'acf-input',
+        'acf-pro-input',
+        'select2',
+        'acf-datepicker',
+        'acf-timepicker',
+        'wp-color-picker',
+    ];
+
+    foreach ( $scripts_to_remove as $script ) {
+        wp_dequeue_script( $script );
+        wp_deregister_script( $script );
+    }
+
+    foreach ( $styles_to_remove as $style ) {
+        wp_dequeue_style( $style );
+        wp_deregister_style( $style );
+    }
+}
+add_action( 'wp_enqueue_scripts', 'custom_dequeue_unnecessary_assets', 999 );
 
